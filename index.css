@@ -164,3 +164,18 @@ body {
     width: 100%;
   }
 }
+/* Keep side-by-side layout on mobile but adjust widths */
+@media(max-width: 768px) {
+  .bundle-builder {
+    flex-direction: row; /* Stay side-by-side */
+  }
+
+  .product {
+    grid-template-columns: repeat(2, 1fr); /* 2 products per row on mobile */
+  }
+
+  .bundle-right {
+    min-width: 200px; /* Slightly smaller sidebar for mobile */
+  }
+}
+
