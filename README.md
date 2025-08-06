@@ -8,22 +8,15 @@ Users can browse a set of products, add them to a bundle, and receive a 30% disc
 
 🚀 Features
 Responsive grid layout of products
-
 Add/remove products to bundle
-
 Live bundle progress tracker
-
 Dynamic discount calculation (30% on 3+ products)
-
 Subtotal and discount display
-
 Clean and modern UI
 
 🛠️ Technologies Used
 HTML
-
 CSS (Flexbox & Responsive Design)
-
 JavaScript (DOM Manipulation)
 
 
