@@ -1,0 +1,166 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background: #fff;
+  color: #333;
+}
+
+/* Layout wrapper */
+.bundle-builder {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+/* Product grid section */
+.product {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.grid {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 6px;
+  transition: box-shadow 0.2s ease;
+  background: #fafafa;
+}
+
+.grid:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Buttons inside product cards */
+.grid button {
+  margin-top: 0.5rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.grid button:hover:not(.added) {
+  background: #444;
+}
+
+.grid button.added {
+  background: green;
+}
+
+/* Bundle summary sidebar */
+.bundle-right {
+  flex: 1;
+  border-left: 1px solid #ddd;
+  padding: 1rem;
+  min-width: 250px;
+  background: #fff;
+  border-radius: 6px;
+}
+
+/* Progress bar */
+.continue {
+  background: #f2f2f2;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+  position: relative;
+}
+
+.continue-bar {
+  height: 10px;
+  width: 0%;
+  background: green;
+  transition: width 0.3s ease;
+}
+
+.continue-text {
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: inline-block;
+}
+
+/* Selected bundle list */
+.list {
+  margin-top: 1rem;
+}
+
+.bundle-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  background: #f9f9f9;
+  padding: 0.25rem;
+  border-radius: 4px;
+}
+
+.bundle-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+}
+
+/* Price summary */
+.summary {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* CTA button */
+.add-bundle-to-cart {
+  width: 100%;
+  padding: 0.75rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+.add-bundle-to-cart:hover:not(:disabled) {
+  background: #444;
+}
+
+.add-bundle-to-cart:disabled {
+  background: #888;
+  cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media(max-width: 768px) {
+  .bundle-builder {
+    flex-direction: column;
+  }
+
+  .bundle-right {
+    order: 2;
+    border-left: none;
+    border-top: 1px solid #ddd;
+    width: 100%;
+  }
+}
